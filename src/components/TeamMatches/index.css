@@ -1,0 +1,53 @@
+/* Write your CSS here */
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+.reload {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.main-container {
+  background-color: orange;
+  min-height: 100vh;
+  width: 100%;
+  padding: 30px;
+  padding-bottom: 50px;
+}
+.team-image {
+  width: 100%;
+  margin-bottom: 30px;
+  background-color: palevioletred;
+}
+.list-cont {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  list-style-type: none;
+  justify-content: center;
+  align-items: center;
+  column-gap: 40px;
+  row-gap: 40px;
+  margin: 40px 0;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .list-cont {
+    column-gap: 30px;
+    row-gap: 30px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .list-cont {
+    width: 100%;
+    column-gap: 30px;
+    row-gap: 30px;
+  }
+}

@@ -1,0 +1,65 @@
+/* Write your CSS here */
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+.latest-card{
+    display: flex;
+    justify-content: space-between;
+    background-color: #1e293b;
+    padding: 30px;
+    align-items: center;
+    border-radius: 20px;
+}
+.latest-card img{
+    width: 30%;
+}
+.first{
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+    color: white;
+    align-items: center;
+}
+.left h1{
+    margin: 70px 0px 40px 0px;
+}
+.left p{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.left .date{
+    font-size: 26px;
+    margin-bottom: 25px;
+}
+.right{
+    text-align: right;
+    width: 40%;
+}
+.right p{
+    color: white;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+
+@media screen and (max-width : 768px) {
+    .latest-card{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .first{
+        width: 100%;
+        padding-bottom: 30px;
+    }
+    .hr-line{
+        border: 1px solid #4f5db0;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .right{
+        width: 100%;
+        text-align: left;
+    }
+}
