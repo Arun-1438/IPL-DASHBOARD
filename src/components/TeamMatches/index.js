@@ -1,6 +1,7 @@
 // Write your code here
 import {Component} from 'react'
 import Loader from 'react-loader-spinner'
+import {v4} from 'uuid'
 
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css'
 
@@ -36,6 +37,7 @@ class TeamMatches extends Component {
     const {latestMatch, recentMatches, teamBannerUrlLink} = formattedTeamMatch
     console.log(recentMatches)
     const updateRecentMatches = recentMatches.map(each => ({
+      id: v4(),
       umpires: each.umpires,
       result: each.result,
       manOfTheMatch: each.man_of_the_match,
@@ -75,24 +77,24 @@ class TeamMatches extends Component {
       recentMatches,
     } = this.state
     const {match} = this.props
-    const {path} = match
-    console.log(path.id)
+    const {params} = match
+    const {id} = params
     return (
-      <div className="main-container">
+      <div className={`main-container ${id}`}>
         {isLoading ? (
           <div data-testid="loader" className="reload">
-            <Loader type="Oval" color="#00BFFF" height={600} width={100} />
+            <Loader type="Oval" color="black" height={600} width={100} />
           </div>
         ) : (
           <>
             <img className="team-image" src={teamBannerUrl} alt="team banner" />
-            <h3>Latest Match</h3>
+            <h1 className="heading">Latest Match</h1>
             <div className="latest-match">
               <LatestMatch latestDetails={latestMatchDetails} />
             </div>
             <ul className="list-cont">
               {recentMatches.map(each => (
-                <MatchCard matchDetails={each} key={each.competingTeam} />
+                <MatchCard matchDetails={each} key={each.id} />
               ))}
             </ul>
           </>

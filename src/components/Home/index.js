@@ -27,6 +27,7 @@ class Home extends Component {
 
   render() {
     const {IplTeams, isLoading} = this.state
+    console.log(IplTeams)
     console.log(isLoading)
     return (
       <div className="main">

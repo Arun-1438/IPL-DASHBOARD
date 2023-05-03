@@ -9,17 +9,46 @@
   align-items: center;
   min-height: 100vh;
 }
+.heading {
+  color: white;
+  margin-bottom: 15px;
+  margin-top: -20px;
+}
 .main-container {
-  background-color: orange;
   min-height: 100vh;
   width: 100%;
   padding: 30px;
   padding-bottom: 50px;
 }
+.main-container.RCB {
+  background-color: #a4261d;
+}
+.main-container.KKR {
+  background-color: #5755a7;
+}
+.main-container.CSK {
+  background-color: #f7db00;
+}
+.main-container.KXP {
+  background-color: #d91c1f;
+}
+.main-container.RR {
+  background-color: #13418b;
+}
+.main-container.DC {
+  background-color: #13418b;
+}
+.main-container.SH {
+  background-color: #f26d22;
+}
+.main-container.MI {
+  background-color:  #4f5db0;
+}
 .team-image {
   width: 100%;
   margin-bottom: 30px;
   background-color: palevioletred;
+  border-radius: 20px;
 }
 .list-cont {
   display: flex;
@@ -42,6 +71,9 @@
     align-items: center;
     margin-bottom: 40px;
   }
+  .team-image{
+      height: 250px;
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -49,5 +81,8 @@
     width: 100%;
     column-gap: 30px;
     row-gap: 30px;
+  }
+  .heading {
+    font-size: 30px;
   }
 }

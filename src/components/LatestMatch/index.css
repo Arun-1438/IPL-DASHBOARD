@@ -52,6 +52,11 @@
     .first{
         width: 100%;
         padding-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+    .first img{
+        width: 80%;
     }
     .hr-line{
         border: 1px solid #4f5db0;
